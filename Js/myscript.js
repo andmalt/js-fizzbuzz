@@ -5,30 +5,21 @@ let numeriArray = [];
 
 /* creo cento numeri da stampare  */
 for( let i = 1; i <= 100; i++){
-    numeriArray.push(i);    
+    numeriArray.push(i);
 }
 
 for( let i = 0; i <= numeriArray.length; i++){
     /* controllo che tipi di numero sono */
-    if((numeriArray[i] % 3 == 0)&&(numeriArray[i] % 5 == 0)){
-        numeriArray.pop();
-        numeriArray.push('FizzBuzz');
+    if((numeriArray[i] % 3 == 0) && (numeriArray[i] % 5 == 0)){
+        numeriArray[i] = 'FizzBuzz';
     }
     else if(numeriArray[i] % 5 == 0){
-        numeriArray.pop();
-        numeriArray.push('Buzz');   
+        numeriArray[i] = 'Buzz';   
     }
     else if(numeriArray[i] % 3 == 0){
-        numeriArray.pop();
-        numeriArray.push('Fizz');
+        numeriArray[i] = 'Fizz';
     } 
 }
 
 
-
-/* let nnn = 12;
-let somma = nnn % 3;
-
-console.log(somma); */
-/* stampo risultato */
 alert(numeriArray);
